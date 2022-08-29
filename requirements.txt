@@ -1,0 +1,6 @@
+sphinx==4.0.2
+-e git+https://github.com/open-mmlab/pytorch_sphinx_theme.git#egg=pytorch_sphinx_theme
+sphinx_copybutton
+sphinx_markdown_tables
+myst-parser
+

@@ -1,14 +1,13 @@
 .. image:: openxrlab_logo.png
-   :width: 150px                  
-
-OpenXRLab Introduction
-======================
+   :width: 300px                    
+   
 
 1. Background
 -----------------
-With the rise of MetaVerse, XR becomes a booming industry all around the world. However, at present, tools related to XR are relatively scattered, and there are usually problems of compatibility in practice. In order to resolve this dilemma, a set of well-integrated toolchains like OpenmmLab and HuggingFace is born on demand. 
+With the rise of MetaVerse, XR becomes a booming industry all around the world. However, at present, tools related to XR are relatively scattered, and there are usually problems of compatibility in practice. In order to resolve this dilemma, a set of well-integrated toolchains like OpenmmLab and HuggingFace is born on demand — **OpenXRLab**. 
+OpenXRLab is an open source platform in the XR field that is built on a unified foundation and implements various application algorithms, which is easy to use independently and jointly.
 
-2. The underlying optimization(Infrastructure)
+2. Infrastructure
 ------------------------------
 We expect for the content programming production for the currently commonly used OpenCV, Open3D, Pytorch3D third-party libraries to sort out, establish a unified content production
 The basic function computing library is named Primer, and the code warehouse of the underlying basic computing library of OpenXRLab is established, and the sorting and interface encapsulation of the third-party library is completed. The optimization of implementation is expected to use the redefined classes and functions of the standard Primer library, which can better support XR related algorithm data opening and computing call. > Optimize some of the shortcomings and shortcomings of current open source libraries.
@@ -31,7 +30,7 @@ At present, we are actively promoting the migration of related applications such
  |      Spatial computing       |  |  Multi-model Huamn Computer Interaction | |           Rendering         |                                                       
  +------------------------------+  +-----------------------------------------+ +-----------------------------+
  +-------------+  +-------------+  +-------------------+ +-------------------+ +-------------+ +-------------+     
- |   XRSLAM    |  |   XRSfm     |  |   XRLocalization  | |      XRMocap      | |   XRMoGen   | |    XRNeRF   |
+ |   XRSLAM    |  |    XRSfm    |  |   XRLocalization  | |      XRMocap      | |   XRMoGen   | |    XRNeRF   |
  +-------------+  +-------------+  +-------------------+ +-------------------+ +-------------+ +-------------+  
  +-----------------------------------------------------------------------------------------------------------+
  |                                         XR Infrastructure Platform                                        |

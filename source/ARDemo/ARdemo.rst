@@ -30,7 +30,7 @@ The capture application looks like the picture on the left in the figure below. 
 you can get AprilTag from: 
 
 .. image:: capture_app.png
-   :width: 2000px
+   :width: 1000px
 
 2）preparation
 >>>>>>>>>>>>>>>>>

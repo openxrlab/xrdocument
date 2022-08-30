@@ -18,9 +18,9 @@ XRPrimer will not do too much function encapsulation and computational reimpleme
 3. Algorithm application 
 -------------------------
 Just like the good ecology of CV, virtual reality not only builds the basic capability of the underlying computing, but also needs more access of different types of algorithm applications in the downstream to promote the continuous optimization of algorithms and underlying computing.
-At present, we are actively promoting the migration of related applications such as NERF (neural rendering), MOCAP (motion capture), SFM/SLAM (localization/reconstruction) to the whole > ecosystem, and then build a complete content algorithm research and development ecosystem with interoperability of underlying computing protocols.
+At present, we are actively promoting the migration of related applications such as NERF (neural rendering), MOCAP (motion capture), SFM/SLAM (localization/reconstruction) to the whole ecosystem, and then build a complete content algorithm research and development ecosystem with interoperability of underlying computing protocols.
 
- We hope you all to find this platform useful and helpful!
+We hope you all to find this platform useful and helpful!
 
 4. OpenXRLab Framework
 ------------------------

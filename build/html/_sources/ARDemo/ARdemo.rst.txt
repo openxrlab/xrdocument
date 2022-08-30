@@ -44,7 +44,7 @@ Before this step, make sure you have cloned XRSfM successfully. See installation
     git clone xrsfm
     git clone xrocalization
     git clone xrdocument 
-    mkdir rawdata # put RawData.txt here from your phone
+    mkdir rawdata # put RawData.bin here from your phone
     mkdir data # unpack_collect_data path
     mkdir save_reconstruction # SFM output MODEL_DIR
 

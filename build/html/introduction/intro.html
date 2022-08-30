@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. Background &mdash; OpenXRLab_Docment  documentation</title>
+  <title>1. Background &mdash; OpenXRLab  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> OpenXRLab_Docment
+            <a href="../index.html" class="icon icon-home"> OpenXRLab
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -37,14 +37,14 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">OpenXRLab Introduction</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Background</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#infrastructure">2. Infrastructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#algorithm-application">3. Algorithm application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#openxrlab-framework">4. OpenXRLab Framework</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">OpenXRLab ARdemo</span></p>
+<p class="caption" role="heading"><span class="caption-text">AR Demo</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ARDemo/ARdemo.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ARDemo/ARdemo.html#quickstart">2. QuickStart</a></li>
@@ -56,7 +56,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">OpenXRLab_Docment</a>
+          <a href="../index.html">OpenXRLab</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -66,7 +66,7 @@
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>1. Background</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/introduction/intro.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Introduction/Intro.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -74,7 +74,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <a class="reference internal image-reference" href="../_images/openxrlab_logo.png"><img alt="../_images/openxrlab_logo.png" src="../_images/openxrlab_logo.png" style="width: 300px;" /></a>
+  <a class="reference internal image-reference" href="../_images/openxrlab_logo.png"><img alt="../_images/openxrlab_logo.png" src="../_images/openxrlab_logo.png" style="width: 500px;" /></a>
 <section id="background">
 <h1>1. Background<a class="headerlink" href="#background" title="Permalink to this headline"></a></h1>
 <p>With the rise of MetaVerse, XR becomes a booming industry all around the world. However, at present, tools related to XR are relatively scattered, and there are usually problems of compatibility in practice. In order to resolve this dilemma, a set of well-integrated toolchains like OpenmmLab and HuggingFace is born on demand — <strong>OpenXRLab</strong>.
@@ -83,7 +83,7 @@ OpenXRLab is an open source platform in the XR field that is built on a unified 
 <section id="infrastructure">
 <h1>2. Infrastructure<a class="headerlink" href="#infrastructure" title="Permalink to this headline"></a></h1>
 <p>We expect for the content programming production for the currently commonly used OpenCV, Open3D, Pytorch3D third-party libraries to sort out, establish a unified content production
-The basic function computing library is named Primer, and the code warehouse of the underlying basic computing library of OpenXRLab is established, and the sorting and interface encapsulation of the third-party library is completed. The optimization of implementation is expected to use the redefined classes and functions of the standard Primer library, which can better support XR related algorithm data opening and computing call. &gt; Optimize some of the shortcomings and shortcomings of current open source libraries.
+The basic function computing library is named Primer, and the code warehouse of the underlying basic computing library of OpenXRLab is established, and the sorting and interface encapsulation of the third-party library is completed. The optimization of implementation is expected to use the redefined classes and functions of the standard Primer library, which can better support XR related algorithm data opening and computing call. Optimize some of the shortcomings and shortcomings of current open source libraries.
 XRPrimer is a unified “back-end library” based on OpenCV, Open3D and Pytorch3D third-party libraries, which is a cross between PyTorch/OpenCV and other public open source libraries
 The middle layer of downstream algorithm application is to provide more convenient access to third-party libraries for integration and targeted optimization. Meanwhile, it also provides more convenient tool libraries for development. At the same time, it keeps original usage habits as much as possible and provides convenient installation packages through precompilation.
 XRPrimer will not do too much function encapsulation and computational reimplementation (unless the investment will improve the actual effect and efficiency).</p>
@@ -98,15 +98,22 @@ At present, we are actively promoting the migration of related applications such
 </section>
 <section id="openxrlab-framework">
 <h1>4. OpenXRLab Framework<a class="headerlink" href="#openxrlab-framework" title="Permalink to this headline"></a></h1>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>+------------------------------+  +-----------------------------------------+ +-----------------------------+
-<span class="p">|</span>      Spatial computing       <span class="p">|</span>  <span class="p">|</span>  Multi-model Huamn Computer Interaction <span class="p">|</span> <span class="p">|</span>           Rendering         <span class="p">|</span>
-+------------------------------+  +-----------------------------------------+ +-----------------------------+
-+-------------+  +-------------+  +-------------------+ +-------------------+ +-------------+ +-------------+
-<span class="p">|</span>   XRSLAM    <span class="p">|</span>  <span class="p">|</span>    XRSfm    <span class="p">|</span>  <span class="p">|</span>   XRLocalization  <span class="p">|</span> <span class="p">|</span>      XRMocap      <span class="p">|</span> <span class="p">|</span>   XRMoGen   <span class="p">|</span> <span class="p">|</span>    XRNeRF   <span class="p">|</span>
-+-------------+  +-------------+  +-------------------+ +-------------------+ +-------------+ +-------------+
-+-----------------------------------------------------------------------------------------------------------+
-<span class="p">|</span>                                         XR Infrastructure Platform                                        <span class="p">|</span>
-+-----------------------------------------------------------------------------------------------------------+
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>+-------------------------------------+ +-----------------------------------------+ +-----------------------------+
+<span class="p">|</span>         Spatial computing           <span class="p">|</span> <span class="p">|</span>  Multi-model Huamn Computer Interaction <span class="p">|</span> <span class="p">|</span>           Rendering         <span class="p">|</span>
++-------------------------------------+ +-----------------------------------------+ +-----------------------------+
++--------+ +-------+ +----------------+ +-------------------+ +-------------------+ +-------------+ +-------------+
+<span class="p">|</span> XRSLAM <span class="p">|</span> <span class="p">|</span> XRSFM <span class="p">|</span> <span class="p">|</span> XRLocalization <span class="p">|</span> <span class="p">|</span>      XRMocap      <span class="p">|</span> <span class="p">|</span>     XRMoGen       <span class="p">|</span> <span class="p">|</span>    XRNeRF   <span class="p">|</span> <span class="p">|</span>     ...     <span class="p">|</span>
++--------+ +-------+ +----------------+ +-------------------+ +-------------------+ +-------------+ +-------------+
+----------------------------------------------<span class="o">=======</span> BINARY <span class="nv">RELEASE</span> <span class="o">=======</span>---------------------------------------
++-----++--------------------------------------------------------------------------++------------------------------+
+<span class="p">|</span>  L  <span class="o">||</span>                        C++/Python API                                    <span class="o">||</span>         C/C++ struct         <span class="p">|</span>
+<span class="p">|</span>  o  <span class="p">|</span>+--------------------------------------------------------------------------+<span class="p">|</span>         Python struct        <span class="p">|</span>
+<span class="p">|</span>  g  <span class="p">|</span>+-----------------------------++-------------------------------------------+<span class="p">|</span>             ...              <span class="p">|</span>
+<span class="p">|</span>     <span class="o">||</span>          XR tools           <span class="o">||</span>            Basic libraries                <span class="o">||</span>                              <span class="p">|</span>
++-----++-----------------------------++-------------------------------------------++------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+<span class="p">|</span>                                               XR Infrastructure Platform                                        <span class="p">|</span>
++-----------------------------------------------------------------------------------------------------------------+
 </pre></div>
 </div>
 <ul class="simple">

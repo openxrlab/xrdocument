@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'OpenXRLab_Docment'
+project = 'OpenXRLab'
 copyright = '2022, openxrlab'
 author = 'openxrlab'
 

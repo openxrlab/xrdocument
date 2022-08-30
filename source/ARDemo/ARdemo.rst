@@ -9,7 +9,7 @@ The current set of ARDemo has preliminarily completed the series of basic capabi
 .. image:: pipeline.png
    :width: 1000px
 
-1. QuickStart
+2. QuickStart
 -----------------
 To see the AR demo on your iPhone, you need to perform the following steps:
 
@@ -29,7 +29,7 @@ Currently we recover the real-world metric scale through marker, so you need to 
 The capture application looks like this. Choose suitable fps and click the red button to start recording. After you have finished, open the folder and send the data to your personal computer through airdrop. The recorded data will be a binary file ending in '.bin'.
 
 .. image:: capture_app.png
-   :width: 300px
+   :width: 600px
 
 2）Preparation
 >>>>>>>>>>>>>>>>>
@@ -44,7 +44,7 @@ Before this step, make sure you have cloned XRSfM successfully. See installation
     git clone xrsfm
     git clone xrocalization
     git clone xrdocument 
-    mkdir rawdata # put RawData.txt here from your phone
+    mkdir rawdata # put RawData.bin here from your phone
     mkdir data # unpack_collect_data path
     mkdir save_reconstruction # SFM output MODEL_DIR
 
@@ -81,8 +81,6 @@ One way is to deploy the visual positioning service on a server with a WAN IP. T
 
 .. raw:: html
     
-    <iframe height=498 width=510 src='https://user-images.githubusercontent.com/45313680/187333743-2cb7a982-f094-4998-94c7-e5197de9be50.mp4
-
-' frameborder=0 'allowfullscreen'></iframe>
+    <iframe height=498 width=510 src='https://user-images.githubusercontent.com/45313680/187333743-2cb7a982-f094-4998-94c7-e5197de9be50.mp4' frameborder=0 'allowfullscreen'></iframe>
 
 The GUI of AR demo application looks like the above picture. You need to click the 'VLoc' button to switch to the mode with visual positioning service. To see the AR logo, click the start button. A toast labeling 'Step 1: Initializing the SLAM' will appear and you should move in a curved trajectory to make the SLAM initialize well. After that, another toast labeling 'Step 2' will replace the original one and remind you to keep your phone facing the front. In this step, the system will try to localize your 6 DoF pose through the visual positioning service. Generally, these two steps will takes no more than 3 seconds in total. After that, you can add new AR objects by tapping the screen. More details about the GUI can be found in XRSLAM.   

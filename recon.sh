@@ -1,24 +1,26 @@
 # Desired folder tree
-# --/path/to/data -> DATA_DIR
-# ----RawData.bin -> RAW_DATA_PATH
-# --/path/to/save_reconstruction -> MODEL_DIR
-# --/path/to/xr_workspace
-# ----XRARdemo
-# ------recon.sh
-# ----XRSfm
-# ----XRLocalization
+# └── XRARdemo
+#     ├── XRLocalization
+#     ├── XRSfm
+#     ├── data -> DATA_DIR
+#     ├── rawdata/data.bin -> RAW_DATA_PATH
+#     └── save_reconstruction -> MODEL_DIR
+#     └── xrdocument
+#         ├── recon.sh
 
 DATA_DIR=''
 RAW_DATA_PATH=''
 MODEL_DIR=''
 
 SFM_DIR=${MODEL_DIR}/sfm/
+TAG_SFM_DIR=${MODEL_DIR}/tag_sfm/
 REFINE_DIR=${MODEL_DIR}/refine/
-IMAGE_DIR=${DATA_DIR}/images
+IMAGE_DIR=${DATA_DIR}/images/
 CAMERA_TXT=${DATA_DIR}/camera.txt
 
 mkdir -p ${MODEL_DIR}
 mkdir -p ${SFM_DIR}
+mkdir -p ${TAG_SFM_DIR}
 mkdir -p ${REFINE_DIR}
 mkdir -p ${IMAGE_DIR}
 
@@ -33,12 +35,14 @@ cd ../XRLocalization
 export PYTHONPATH=$PYTHONPATH:`pwd`
 
 [[ -f ${SFM_DIR}/database.db ]] || python tools/ir_create_database.py --image_dir ${IMAGE_DIR} --database_path ${SFM_DIR}/database.db  || { echo 'create database failed' ; exit 1; }
-[[ -f ${SFM_DIR}/retrieval.txt ]] || python tools/ir_image_retrieve.py --database_path ${SFM_DIR}/database.db --save_path ${SFM_DIR}/retrieval.txt  || { echo 'image retrieval failed' ; exit 1; }
+[[ -f ${SFM_DIR}/retrieval.txt ]] || python tools/ir_image_retrieve.py --retrieve_num 100 --database_path ${SFM_DIR}/database.db --save_path ${SFM_DIR}/retrieval.txt  || { echo 'image retrieval failed' ; exit 1; }
 
 # run sfm
 echo 'Step 2: Running Sfm'
+cd ../xrsfm
 [[ -f ${SFM_DIR}/ftr.bin ]] || ./bin/run_matching ${IMAGE_DIR} ${SFM_DIR}/retrieval.txt sequential ${SFM_DIR}  || { echo 'sift matching failed' ; exit 1; }
-[[ -f ${SFM_DIR}/images.bin ]] || ./bin/rec_seq ${SFM_DIR} ${IMAGE_DIR} ${CAMERA_TXT} ${SFM_DIR}  || { echo 'sequential recon failed' ; exit 1; }
+[[ -f ${SFM_DIR}/images.bin ]] || ./bin/run_reconstruction ${SFM_DIR} ${CAMERA_TXT} ${SFM_DIR}  || { echo 'sequential recon failed' ; exit 1; }
+[[ -f ${TAG_SFM_DIR}/cameras.bin ]] || ./bin/estimate_scale ${IMAGE_DIR} ${SFM_DIR} ${TAG_SFM_DIR}  || { echo 'recover scale failed' ; exit 1; }
 
 # extract/match with superpoint
 echo 'Step 3: Re-extract/match with superpoint'

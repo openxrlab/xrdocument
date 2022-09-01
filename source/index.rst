@@ -1,20 +1,18 @@
- XRContributorDoc documentation master file, created by
-   sphinx-quickstart on Wed Apr 20 11:45:54 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. image:: openxrlab_logo.png
+   :width: 500px                    
 
 Welcome to OpenXRLab!
 ============================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: OpenXRLab Introduction
+   :caption: Introduction
 
-   introduction/intro
+   Introduction/Intro
 
 .. toctree::
    :maxdepth: 2
-   :caption: OpenXRLab ARdemo 
+   :caption: AR Demo 
    
    ARDemo/ARdemo
 

@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'XRContributorDoc'
-copyright = '2022, lsq'
-author = 'lsq'
+project = 'OpenXRLab'
+copyright = '2022, openxrlab'
+author = 'openxrlab'
 
 
 # -- General configuration ---------------------------------------------------

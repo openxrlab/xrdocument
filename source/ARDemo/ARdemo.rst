@@ -26,7 +26,7 @@ Available iPhone model for the capture application as below :
 
 +  Recover the real-world metric scale through marker
 Currently we recover the real-world metric scale through marker, so you need to post several (usually 2-3) AprilTag (https://github.com/openxrlab/xrdocument/blob/dev/tag.pdf) with different IDs in your room before recording data, just like the picture on the right in the figure below.
-The capture application looks like this. Choose suitable fps and click the red button to start recording. After you have finished, open the folder and send the data to your personal computer through airdrop. The recorded data will be a binary file ending in '.bin'.
+The capture application looks like this. Choose suitable fps (e.g., 3fps) and click the red button to start recording. After you have finished, open the folder and send the data to your personal computer through airdrop. The recorded data will be a binary file ending in '.bin'.
 
 .. image:: capture_app.png
    :width: 600px
@@ -64,11 +64,16 @@ before you should config the path in recon.sh(https://github.com/openxrlab/xrdoc
 + Deploy positioning service and run it on your own server.
 
 .. code-block:: bash
+
     cd /path/to/XRLocalization
     python run_web_server.py --map_path /path/to/reconstruction_model --port 3000
 
-make sure you can connect to the server from your iPhone.
-One way is to deploy the visual positioning service on a server with a WAN IP. The other way is setup a LAN and connect both the server and your iPhone to this LAN. To test if the connection is established, visit ```http://ip:port``` on the browser of your iPhone. You will see a 'Hello' if it is successful.
+You can also replace the port with anoyher if it is accessible and not blocked by a firewall etc.
+Also make sure you can connect to the server from your iPhone.
+One way is to deploy the visual positioning service on a server with a WAN IP.
+The other way is setup a LAN and connect both the server and your iPhone to this LAN.
+To test if the connection is established, visit ```http://ip:port``` on the browser of your iPhone.
+You will see a 'Hello' if it is successful.
 
 + Build SLAM AR app and install it on your iPhone. Reference XRSLAM doc: https://github.com/openxrlab/xrslam
 

@@ -68,7 +68,7 @@ before you should config the path in recon.sh(https://github.com/openxrlab/xrdoc
     cd /path/to/XRLocalization
     python run_web_server.py --map_path /path/to/reconstruction_model --port 3000
 
-You can also replace the port with anoyher if it is accessible and not blocked by a firewall etc.
+You can also replace the port with another if it is accessible and not blocked by a firewall etc.
 Also make sure you can connect to the server from your iPhone.
 One way is to deploy the visual positioning service on a server with a WAN IP.
 The other way is setup a LAN and connect both the server and your iPhone to this LAN.
